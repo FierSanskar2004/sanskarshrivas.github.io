@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskar Shrivas - Portfolio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="icon" href="/imgs/sanskar.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="/imgs/sanskar.png" alt="">Sanskar Shrivas Portfolio</a></li>
+            <li class="go"><button onclick="gopro()">Skillset</button></li>
+            <li class="go"><button onclick="gomi()">Education</button></li>
+            <li class="go"><button onclick="ring()">Contact</button></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="top"><center><h1>Welcome to My Portfolio!</h1></center></div>
+        <div class="bottom">
+            <ul>
+                <li class="left">
+                    <h4>My name is Sanskar Shrivas. I specialize in Fullstack development and cybersecurity.</h4>
+                </li>
+                <li class="right">
+                    <img src="imgs/right.png" alt="">
+                </li>
+            </ul>
+        </div>
+    </main>
+    <footer>&copy; Sanskar Shrivas 2025</footer>
+</body>
+<script>
+    function gopro() {
+        window.location.href = "projects.html";
+    }
+    function gomi() {
+        window.location.href = "aboutme.html";
+    }
+    let popup = null;
+
+    function ring() {
+        if (popup) {
+            document.body.removeChild(popup);
+            popup = null;
+        } else {
+            popup = document.createElement("div");
+            popup.style.position = "fixed";
+            popup.style.top = "50%";
+            popup.style.left = "50%";
+            popup.style.transform = "translate(-50%, -50%)";
+            popup.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+            popup.style.color = "white";
+            popup.style.padding = "20px";
+            popup.style.borderRadius = "10px";
+            popup.style.zIndex = "9999";
+            popup.innerText = "Contact me at: \nemail: sanskarshrvs@gmail.com \nphone: +91 741-626-5261\nClick the contact button again to close this popup";
+            document.body.appendChild(popup);
+        }
+    }
+</script>
+</html>

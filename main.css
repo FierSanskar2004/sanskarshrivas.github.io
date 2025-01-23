@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: cadetblue;
+}
+
+/* Navigation Bar */
+nav {
+    font-family: cu;
+    background-color: #db440e;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: calc(14px + 0.5vw); /* Responsive text size */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: rgb(130, 229, 10);
+}
+
+nav ul li img {
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 90%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav ul li img:hover {
+    transform: scale(1.2); /* Makes the image pop out by 20% */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+}
+
+nav ul li button {
+    background-color: transparent;
+    color: #9efffd;
+    border: 2px solid transparent;
+    border-radius: 1px;
+    height: 60px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-size: calc(12px + 0.3vw); /* Responsive button text size */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.go button:hover {
+    background-color: rgb(13, 14, 24);
+    color: rgb(130, 229, 10);
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #334b75;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: calc(12px + 0.3vw); /* Responsive text size */
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+footer button {
+    background-color: rgb(2, 113, 106);
+    color: white;
+    margin-top: 10px;
+    border: 2px solid rgb(7, 207, 238);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: calc(14px + 0.3vw); /* Responsive button text size */
+    transition: all 0.5s ease;
+}
+
+footer button:hover {
+    background-color: rgb(7, 207, 238);
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 10px 0;
+        font-size: calc(10px + 0.3vw); /* Smaller text for smaller screens */
+    }
+
+    footer button {
+        padding: 8px 16px;
+        font-size: calc(12px + 0.3vw);
+    }
+}

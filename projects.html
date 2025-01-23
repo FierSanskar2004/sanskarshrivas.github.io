@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskar Shrivas - Skillset</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="skill.css">
+    <link rel="icon" href="/imgs/sanskar.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><img src="/imgs/sanskar.png" alt="">Sanskar Shrivas Portfolio</a></li>
+            <li class="go"><button onclick="gopro()">Skillset</button></li>
+            <li class="go"><button onclick="gomi()">Education</button></li>
+            <li class="go"><button onclick="ring()">Contact</button></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="bgimg-1">
+            <div class="caption">
+                <span class="border">Python 3.12</span>
+            </div>
+        </div>
+
+        <div class="des">
+            <ul>
+                <li>Completion : March-2023</li>
+                <li>Topics: Basics + Datastructures + OOPS + some libraries (Pygame,Pandas,Numpy,Matplotlib)</li>
+            </ul>
+        </div>
+        <div class="bgimg-2">
+            <div class="caption">
+                <span class="border">HTML 5</span>
+            </div>
+        </div>
+
+        <div class="des">
+            <ul>
+                <li>Completion: May-2019</li>
+                <li>Topics: Basic idea + about 50% tags</li>
+            </ul>
+        </div>
+        <div class="bgimg-3">
+            <div class="caption">
+                <span class="border">CSS 3</span>
+            </div>
+        </div>
+
+        <div class="des">
+            <ul>
+                <li>Completion: August-2023</li>
+                <li>Topics: Basic idea + formatting + Responsive design + Parallax scrolling + many other stuff to mention</li>
+            </ul>
+        </div>
+        <div class="bgimg-4">
+            <div class="caption">
+                <span class="border">C</span>
+            </div>
+        </div>
+
+        <div class="des">
+            <h3 style="text-align:center;"></h3>
+            <ul>
+                <li>Completion: May-2023</li>
+                <li>Topics: Basics + Databases</li>
+            </ul>
+        </div>
+        <div class="bgimg-5">
+            <div class="caption">
+                <span class="border">C++</span>
+            </div>
+        </div>
+
+        <div class="des">
+            <h3 style="text-align:center;"></h3>
+            <ul>
+                <li>Completion: December-2023</li>
+                <li>Topics: Basics + Databases + OOPS</li>
+            </ul>
+        </div>
+    </main>
+    <footer>&copy; Sanskar Shrivas 2025</footer>
+</body>
+<script>
+    function gopro() {
+        window.location.href = "projects.html";
+    }
+    function gomi() {
+        window.location.href = "aboutme.html";
+    }
+    let popup = null;
+
+    function ring() {
+        if (popup) {
+            document.body.removeChild(popup);
+            popup = null;
+        } else {
+            popup = document.createElement("div");
+            popup.style.position = "fixed";
+            popup.style.top = "50%";
+            popup.style.left = "50%";
+            popup.style.transform = "translate(-50%, -50%)";
+            popup.style.backgroundColor = "rgba(61, 38, 11, 0.8)";
+            popup.style.color = "white";
+            popup.style.padding = "20px";
+            popup.style.borderRadius = "10px";
+            popup.style.zIndex = "9999";
+            popup.innerText = "Contact me at: \nemail: sanskarshrvs@gmail.com \nphone: +91 741-626-5261\nClick the contact button again to close this popup";
+            document.body.appendChild(popup);
+        }
+    }
+</script>
+</html>

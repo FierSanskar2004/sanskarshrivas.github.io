@@ -1,0 +1,81 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+
+body {
+    background-color: rgb(17, 76, 76);
+    margin: 0;
+}
+
+.top {
+    background-color: rgb(202, 192, 77);
+    color: white;
+    height: 11vh; /* Scales with viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1.2rem + 0.5vw); /* Scales with viewport width */
+    text-align: center;
+}
+
+main ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.left {
+    color: rgb(198, 161, 198);
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1.3rem + 2.1vw); /* Responsive scaling */
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right img {
+    min-height: calc(100vh - 45px - 60px);
+    justify-content: center;
+    position: fixed;
+    width: 50%;
+    height: auto; /* Ensures the image maintains aspect ratio */
+    right: 0;
+    filter:grayscale(75%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .top {
+        font-size: calc(1rem + 1vw); /* Adjust for smaller screens */
+        height: 10vh;
+    }
+
+    .left {
+        font-size: calc(0.9rem + 1.5vw); /* Scale text size for smaller devices */
+        width: 100%; /* Take full width on smaller screens */
+        padding: 10px;
+    }
+
+    .right img {
+        position: static; /* Disable fixed position for smaller screens */
+        width: 100%; /* Make image responsive */
+        height: auto;
+        
+    }
+}
+
+.content-container { /* Replace with the class of your main content */
+    min-height: 100vh; /* Ensure content always fills the viewport */
+    overflow-y: auto; /* Add vertical scrolling if content exceeds height */
+}
+
+
